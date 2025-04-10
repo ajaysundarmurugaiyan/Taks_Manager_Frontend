@@ -1,5 +1,5 @@
 // Define API URL - use environment variable in production, fallback in development
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://task-manager-backend-1-ld6k.onrender.com/api';
 
 // Helper function to handle API responses
 const handleResponse = async (response) => {
