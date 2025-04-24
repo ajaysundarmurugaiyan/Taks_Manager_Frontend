@@ -50,7 +50,12 @@ export const login = async (email, password) => {
 export const registerUser = async (userData) => {
   const response = await fetch(`${API_URL}/auth/register`, {
     method: 'POST',
-    headers: getAuthHeaders(),
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${localStorage.getItem('token')}`,
+      'Accept': 'application/json'
+    },
+    credentials: 'include',
     body: JSON.stringify(userData)
   });
 
